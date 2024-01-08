@@ -1,6 +1,6 @@
 /** @format */
 function commentClicked(id) {
-  window.location = `postDetails.html?postId=${id}`;
+  window.location = `PostDetails.html?postId=${id}`;
 }
 function showAlert(message, type = "success") {
   const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
