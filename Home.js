@@ -34,7 +34,6 @@ function getPosts() {
       if (currentPage == 1) {
         postsContainer.innerHTML = "";
       }
-      currentPage++;
       let posts = response.data.data;
       lastPage = response.data.meta.last_page;
       for (element of posts) {
@@ -269,10 +268,10 @@ ${userData.username}
 profileData();
 window.onscroll = function () {
   if (
-    window.scrollY + document.documentElement.clientHeight >=
-      document.documentElement.scrollHeight &&
+    window.innerHeight + window.pageYOffset >= document.body.offsetHeight&&
     currentPage <= lastPage
   ) {
+    currentPage++;
     getPosts();
   }
 };
