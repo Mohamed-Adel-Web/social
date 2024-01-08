@@ -26,5 +26,4 @@ function showAlert(message, type = "success") {
 }
 function userProfilePage(id) {
   window.location = `profile.html?postId=${id}`;
-  getUserInfo();
 }

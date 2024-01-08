@@ -81,7 +81,7 @@ function postDetails() {
       setupComment();
     })
     .catch(function (error) {
-      window.alert(error);
+      showAlert(error,"danger");
     });
 }
 function addComment() {
